@@ -10,9 +10,8 @@
           <el-menu-item index="2-2">选项2</el-menu-item>
           <el-menu-item index="2-3">选项3</el-menu-item>
         </el-submenu>
-        <el-menu-item index="3"><a href="/admin" target="_blank">订单管理</a></el-menu-item>
-        <el-menu-item index="4">
-          <el-button type="danger" round @click="logout()">退出登录</el-button>
+        <el-menu-item index="3">
+          <el-button type="primary" round @click="logout()">退出登录</el-button>
         </el-menu-item>
       </el-menu>
     </el-header>
@@ -210,6 +209,7 @@ export default {
   methods: {
     getPros () {
       let tvm = this
+      tvm.axios.defaults.headers.common['Authorization'] = localStorage.getItem('Token')
       this.axios.get('/api/saler/tasks')
         .then(function (res) {
           tvm.products = res.data
