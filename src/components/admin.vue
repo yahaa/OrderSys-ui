@@ -429,6 +429,7 @@ export default {
         .then(function (res) {
           tvm.products = res.data
         }).catch(function (res) {
+          tvm.permit()
           console.log(res)
         })
     },
@@ -560,6 +561,18 @@ export default {
         }).catch(function (res) {
           console.log(res)
         })
+    },
+    permit () {
+      this.$alert('你没有权限访问该目录', '权限管理', {
+        confirmButtonText: '确定',
+        callback: action => {
+          this.$message({
+            type: 'info',
+            message: `action: ${action}`
+          })
+          this.$router.push('/')
+        }
+      })
     }
   },
   filters: {
