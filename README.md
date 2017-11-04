@@ -31,15 +31,33 @@ npm test
 * 自己看吧
 
 ### 最终界面
+* 登录
 
+![login](https://github.com/yahaa/OrderSys-ui/raw/master/login.png)
+
+* 普通用户登录后１
 
 ![普通客户](https://github.com/yahaa/OrderSys-ui/raw/master/cus1.png)
+
+
+* 普通用户登录后２
 
 
 ![普通客户操作](https://github.com/yahaa/OrderSys-ui/raw/master/cus2.png)
 
 
+* 管理员登录１
+
+![admin](https://github.com/yahaa/OrderSys-ui/raw/master/admin.png)
+
+* 管理员登录１
+
+![admin](https://github.com/yahaa/OrderSys-ui/raw/master/admin1.png)
+
+* 管理员登录１
+
 ![admin](https://github.com/yahaa/OrderSys-ui/raw/master/admin2.png)
 
+* 销售员登录
 
 ![saler](https://github.com/yahaa/OrderSys-ui/raw/master/saler.png)
