@@ -2,7 +2,7 @@
 <div class="hello">
   <el-container>
     <el-header style="padding:0px">
-      <el-menu :default-active="2" mode="horizontal" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" style="padding:0px 60px 0px 60px;">
+      <el-menu mode="horizontal" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" style="padding:0px 60px 0px 60px;">
         <el-menu-item index="1" style="font-size:20px">订单处理中心</el-menu-item>
         <el-submenu index="2">
           <template slot="title">我的工作台</template>
@@ -190,20 +190,20 @@
 
   <el-dialog title="添加用户" :visible.sync="dialogFormVisible">
     <el-form :model="addUser">
-      <el-form-item label="用户ID" :label-width="formLabelWidth">
+      <el-form-item label="用户ID">
         <el-input v-model="addUser.userId" size="10" placeholder="请输入用户名"></el-input>
       </el-form-item>
-      <el-form-item label="用户名" :label-width="formLabelWidth">
+      <el-form-item label="用户名">
         <el-input v-model="addUser.name" size="10" placeholder="请输入用户名"></el-input>
       </el-form-item>
 
-      <el-form-item label="联系电话" :label-width="formLabelWidth">
+      <el-form-item label="联系电话">
         <el-input v-model="addUser.phone" size="10" placeholder="请输入联系电话"></el-input>
       </el-form-item>
-      <el-form-item label="密码" :label-width="formLabelWidth">
+      <el-form-item label="密码">
         <el-input v-model="addUser.password" size="10" placeholder="请输入用户初始密码"></el-input>
       </el-form-item>
-      <el-form-item label="性别" :label-width="formLabelWidth">
+      <el-form-item label="性别">
         <el-select v-model="addUser.sex" placeholder="请选择">
           <el-option v-for="item in sexValue" :key="item.value" :label="item.label" :value="item.value">
           </el-option>
@@ -211,7 +211,7 @@
       </el-form-item>
 
 
-      <el-form-item label="身份" :label-width="formLabelWidth">
+      <el-form-item label="身份">
         <el-select v-model="addUser.roleId" placeholder="请选择">
           <el-option v-for="item in roleValue" :key="item.value" :label="item.label" :value="item.value">
           </el-option>
@@ -227,23 +227,23 @@
 
   <el-dialog title="修改用户基本信息" :visible.sync="editerDia">
     <el-form :model="edUser">
-      <el-form-item label="用户ID" :label-width="formLabelWidth">
+      <el-form-item label="用户ID">
         <el-input v-model="edUser.userId" size="10" :disabled="true"></el-input>
       </el-form-item>
-      <el-form-item label="用户名" :label-width="formLabelWidth">
+      <el-form-item label="用户名">
         <el-input v-model="edUser.name" size="10" placeholder="请输入用户名"></el-input>
       </el-form-item>
 
-      <el-form-item label="联系电话" :label-width="formLabelWidth">
+      <el-form-item label="联系电话">
         <el-input v-model="edUser.phone" size="10" placeholder="请输入联系电话"></el-input>
       </el-form-item>
-      <el-form-item label="性别" :label-width="formLabelWidth">
+      <el-form-item label="性别">
         <el-select v-model="edUser.sex" placeholder="请选择">
           <el-option v-for="item in sexValue" :key="item.value" :label="item.label" :value="item.value">
           </el-option>
         </el-select>
       </el-form-item>
-      <el-form-item label="身份" :label-width="formLabelWidth">
+      <el-form-item label="身份">
         <el-select v-model="edUser.roleId" placeholder="请选择">
           <el-option v-for="item in roleValue" :key="item.value" :label="item.label" :value="item.value">
           </el-option>
@@ -259,17 +259,17 @@
 
   <el-dialog title="指派销售任务" :visible.sync="salerTask">
     <el-form :model="curTask">
-      <el-form-item label="商品ID" :label-width="formLabelWidth">
+      <el-form-item label="商品ID">
         <el-input v-model="curTask.proId" size="10" :disabled="true"></el-input>
       </el-form-item>
 
-      <el-form-item label="销售员ID" :label-width="formLabelWidth">
+      <el-form-item label="销售员ID">
         <el-select v-model="curTask.userId" placeholder="请选择">
           <el-option v-for="item in users" v-if="item.roleId==='2'" :key="item.userId" :label="item.userId" :value="item.userId">
           </el-option>
         </el-select>
       </el-form-item>
-      <el-form-item label="备注" :label-width="formLabelWidth">
+      <el-form-item label="备注">
         <el-input v-model="curTask.marks" size="10" placeholder="请输入备注"></el-input>
       </el-form-item>
 
@@ -282,35 +282,35 @@
 
   <el-dialog title="添加加商品" :visible.sync="addProVisible">
     <el-form :model="curAddPro">
-      <el-form-item label="商品ID" :label-width="formLabelWidth">
+      <el-form-item label="商品ID">
         <el-input v-model="curAddPro.proId" size="10"></el-input>
       </el-form-item>
 
-      <el-form-item label="商品名称" :label-width="formLabelWidth">
+      <el-form-item label="商品名称">
         <el-input v-model="curAddPro.proName" size="10"></el-input>
       </el-form-item>
 
-      <el-form-item label="商品模型" :label-width="formLabelWidth">
+      <el-form-item label="商品模型">
         <el-input v-model="curAddPro.proSM" size="10"></el-input>
       </el-form-item>
 
-      <el-form-item label="供应商家" :label-width="formLabelWidth">
+      <el-form-item label="供应商家">
         <el-input v-model="curAddPro.proCom" size="10"></el-input>
       </el-form-item>
 
-      <el-form-item label="商品单价" :label-width="formLabelWidth">
+      <el-form-item label="商品单价">
         <el-input v-model="curAddPro.proPrice" size="10"></el-input>
       </el-form-item>
 
-      <el-form-item label="采购总量" :label-width="formLabelWidth">
+      <el-form-item label="采购总量">
         <el-input v-model="curAddPro.proCounts" size="10"></el-input>
       </el-form-item>
 
-      <el-form-item label="商品款式" :label-width="formLabelWidth">
+      <el-form-item label="商品款式">
         <el-input v-model="curAddPro.proStye" size="10"></el-input>
       </el-form-item>
 
-      <el-form-item label="备注" :label-width="formLabelWidth">
+      <el-form-item label="备注">
         <el-input v-model="curAddPro.marks" size="10" placeholder="请输入备注"></el-input>
       </el-form-item>
 
